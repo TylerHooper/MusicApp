@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Music App</h1>
+    <p class="lead">This app will help find your musical elements with ease. Currently working on Key Signatures.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Key Signatures</h2>
+        <p>
+            Find your Key Signatures here! Choose from a pre-set key signature, or enter your own formula!
+        </p>
+        <p><a class="btn btn-default" href=@Html.ActionLink("Go Now »", "KeySignatures", "KeySignatures")></a></p>
+    </div>
+    <div class="col-md-6">
+        <h2>More coming soon...</h2>
+        <p>Next step: Take over the world.</p>
+        <p>- Your friendly neighborhood AI</p>
+    </div>
+</div>
