@@ -11,6 +11,7 @@ namespace Music.App.Controllers
         // GET: KeySignatures
         public ActionResult Index()
         {
+            ViewBag.Message = "Fill in your Key Signature here:";
             return View();
         }
     }

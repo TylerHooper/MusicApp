@@ -2,6 +2,46 @@
     ViewBag.Title = "Key Signatures";
 }
 <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h5>@ViewBag.Message</h5>
 
-<p>Use this area to provide additional information.</p>
+<form class="form-horizontal">
+    <div class="form-group">
+        <label for="keyLetter">Key</label>
+        <div class="form-inline">
+            <select class="form-control">
+                <option>C</option>
+                <option>D</option>
+                <option>E</option>
+                <option>F</option>
+                <option>G</option>
+                <option>A</option>
+                <option>B</option>
+            </select>
+            <select class="form-control">
+                <option>♭</option>
+                <option>#</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="modeInput">Mode</label>
+        <div class="form-inline">
+            <select class="form-control">
+                <option>Major</option>
+                <option>Natural Minor</option>
+                <option>Harmonic Minor</option>
+                <option>Melodic Minor</option>
+                <option>Ionian</option>
+                <option>Dorian</option>
+                <option>Phrygian</option>
+                <option>Lydian</option>
+                <option>Mixolydian</option>
+                <option>Aeolian</option>
+                <option>Locrian</option>
+                <option>Other...</option>
+            </select>
+            <input type="text" class="form-control" placeholder="Custom" disabled>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-default" disabled="disabled">Submit</button>
+</form>
