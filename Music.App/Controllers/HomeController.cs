@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Music.BLL;
 
 namespace Music.App.Controllers
 {
@@ -15,15 +16,15 @@ namespace Music.App.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "7.";
-            ViewBag.Tester = "Hello World!";
+            ViewBag.DateTimeNow = DateTime.Now;
+            ViewBag.Message = "This is the about page!";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Please email all inquires to:";
 
             return View();
         }

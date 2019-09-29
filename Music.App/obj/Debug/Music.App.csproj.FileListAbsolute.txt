@@ -80,3 +80,5 @@ C:\Users\Bandit\source\repos\MusicApp\Music.App\bin\System.Web.Http.WebHost.dll
 C:\Users\Bandit\source\repos\MusicApp\Music.App\bin\System.Net.Http.Formatting.xml
 C:\Users\Bandit\source\repos\MusicApp\Music.App\bin\System.Web.Http.xml
 C:\Users\Bandit\source\repos\MusicApp\Music.App\bin\System.Web.Http.WebHost.xml
+C:\Users\Bandit\source\repos\MusicApp\Music.App\bin\Music.BLL.dll
+C:\Users\Bandit\source\repos\MusicApp\Music.App\bin\Music.BLL.pdb
