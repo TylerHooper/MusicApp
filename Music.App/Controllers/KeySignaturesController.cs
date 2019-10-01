@@ -9,17 +9,22 @@ namespace Music.App.Controllers
         // GET: KeySignatures
         public ActionResult Index()
         {
-            char key;
-            char acc;
-            string mode;
-            string customMode;
-
-
             ViewBag.Message = "Fill in your Key Signature here:";
-
             
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(KeySignatureForm keySignature)
+        {
+            // declare variables based on form input
+            char key = keySignature.Key;
+            string accidential = keySignature.Accidential;
+            string mode = keySignature.Mode;
+            string customMode = keySignature.CustomMode;
 
             return View();
         }
+
     }
 }

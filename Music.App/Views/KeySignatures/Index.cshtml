@@ -5,46 +5,50 @@
 <h2>@ViewBag.Title</h2>
 <h5>@ViewBag.Message</h5>
 
-<form class="form-horizontal">
-    <label for="keyLetter">Key</label>
-    <div class="form-inline">
-        <div class="row">
-            <div class="col-lg-1">
-                <select class="form-control">
-                    <option value="c">C</option>
-                    <option value="d">D</option>
-                    <option value="e">E</option>
-                    <option value="f">F</option>
-                    <option value="g">G</option>
-                    <option value="a">A</option>
-                    <option value="b">B</option>
-                </select>
-            </div>
-            <div class="col-lg-1">
-                <select class="form-control">
-                    <option value="flat">♭</option>
-                    <option value="sharp">#</option>
-                </select>
+@using (Html.BeginForm("Index", "KeySignatures", FormMethod.Post))
+{
+    <form class="form-horizontal">
+        <label for="keyLetter">Key</label>
+        <div class="form-inline">
+            <div class="row">
+                <div class="col-lg-1">
+                    <select id="Key" name="Key" class="form-control">
+                        <option value="c">C</option>
+                        <option value="d">D</option>
+                        <option value="e">E</option>
+                        <option value="f">F</option>
+                        <option value="g">G</option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                    </select>
+                </div>
+                <div class="col-lg-1">
+                    <select id="Accidential" name="Accidential" class="form-control">
+                        <option value="natural">♮</option>
+                        <option value="flat">♭</option>
+                        <option value="sharp">#</option>
+                    </select>
+                </div>
             </div>
         </div>
-    </div>
-    <label for="modeInput">Mode</label>
-    <div class="form-inline">
-        <select class="form-control">
-            <option value="major">Major</option>
-            <option value="natMinor">Natural Minor</option>
-            <option value="harMinor">Harmonic Minor</option>
-            <option value="melMinor">Melodic Minor</option>
-            <option value="ionian">Ionian</option>
-            <option value="dorian">Dorian</option>
-            <option value="phrygian">Phrygian</option>
-            <option value="lydian">Lydian</option>
-            <option value="mixolydian">Mixolydian</option>
-            <option value="aeolian">Aeolian</option>
-            <option value="locrian">Locrian</option>
-            <option value="other">Other...</option>
-        </select>
-        <input type="text" class="form-control" name="customMode" placeholder="Custom" disabled>
-    </div>
-    <button type="submit" class="btn btn-default" disabled="disabled">Submit</button>
-</form>
+        <label for="modeInput">Mode</label>
+        <div class="form-inline">
+            <select id="Mode" name="Mode" class="form-control">
+                <option value="major">Major</option>
+                <option value="natMinor">Natural Minor</option>
+                <option value="harMinor">Harmonic Minor</option>
+                <option value="melMinor">Melodic Minor</option>
+                <option value="ionian">Ionian</option>
+                <option value="dorian">Dorian</option>
+                <option value="phrygian">Phrygian</option>
+                <option value="lydian">Lydian</option>
+                <option value="mixolydian">Mixolydian</option>
+                <option value="aeolian">Aeolian</option>
+                <option value="locrian">Locrian</option>
+                <option value="other">Other...</option>
+            </select>
+            <input id="CustomMode" name="CustomMode" type="text" class="form-control" name="customMode" placeholder="Custom" @*disabled*@>
+        </div>
+        <button type="submit" class="btn btn-default" @*disabled="disabled"*@>Submit</button>
+    </form>
+}
