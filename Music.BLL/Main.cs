@@ -31,4 +31,5 @@ namespace Music.BLL
         // gets or sets the custom mode, if used
         public string CustomMode { get; set; }
     }
+
 }

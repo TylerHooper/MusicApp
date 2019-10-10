@@ -23,6 +23,12 @@ namespace Music.App.Controllers
             string mode = keySignature.Mode;
             string customMode = keySignature.CustomMode;
 
+            // case switch default returns a viewbag saying error message to the user, need to add error message on the view
+
+            string modeResult = KeySigGenerator.ModeResponse(key, accidential, mode, customMode);
+
+            ViewBag.Result = modeResult;
+            
             return View();
         }
 
