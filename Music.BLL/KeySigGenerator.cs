@@ -8,6 +8,7 @@ namespace Music.BLL
 {
     public class KeySigGenerator
     {
+        // init keyboard array
         public static string[] keyBoard = { "C", "D♭", "D", "E♭", "E", "F", "G♭", "G", "A♭", "A", "B♭", "B" };
 
         // W = Whole Step, H = Half Step, E = Whole + Half Step
@@ -23,11 +24,11 @@ namespace Music.BLL
         public static char[] otherMode = new char[6];
 
         // determines the mode, and calls Stepper method to step through the keys accordingly
-        public static string ModeResponse(char key, string accidential, string mode, string customMode)
+        public static string[] ModeResponse(char key, string accidential, string mode, string customMode)
         {
             string[] result = new string[8];
 
-            // this is where we put the fancy BL
+            // check for the mode and use input passed in from the form for the stepper method
             switch (mode)
             {
                 case "major":
@@ -60,9 +61,13 @@ namespace Music.BLL
                 case "other":
                     result = Stepper(key, accidential, otherMode);
                     break;
+                default:
+                    result[0] = "Uh oh, something went wrong!";
+                    break;
             }
 
-            return String.Format("The keys are: {0} {1} {2} {3} {4} {5} {6} {7}", result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7]);
+            //return String.Format("The keys are: {0} {1} {2} {3} {4} {5} {6} {7}", result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7]);
+            return result;
         }
 
         // method to step through the keys
@@ -96,11 +101,18 @@ namespace Music.BLL
                 case 'B':
                     keyNum = 10;
                     break;
+                default:
+                    keyNum = -1;
+                    break;
             }
 
             // add or subtracked based on accidential
             if (accidential == "flat") keyNum--;
             if (accidential == "sharp") keyNum++;
+
+            // did we go down to B or up to C?
+            if (keyNum == -1) keyNum = 10;
+            if (keyNum == 11) keyNum = 0;
 
             // setting first entry in the result
             result[0] = keyBoard[keyNum];
@@ -122,10 +134,14 @@ namespace Music.BLL
                     case 'E':
                         step = 3;
                         break;
+                    default:
+                        break;
                 }
 
+                // next step on the keyboard
                 iterator += step;
 
+                // checking for the end of the keyboard, move back to the beginning if so
                 if (iterator > 11)
                 {
                     iterator -= 12;
