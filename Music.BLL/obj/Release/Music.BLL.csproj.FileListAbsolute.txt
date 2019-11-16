@@ -3,3 +3,7 @@ C:\Users\Bandit\source\repos\MusicApp\Music.BLL\bin\Release\Music.BLL.pdb
 C:\Users\Bandit\source\repos\MusicApp\Music.BLL\obj\Release\Music.BLL.csproj.CoreCompileInputs.cache
 C:\Users\Bandit\source\repos\MusicApp\Music.BLL\obj\Release\Music.BLL.dll
 C:\Users\Bandit\source\repos\MusicApp\Music.BLL\obj\Release\Music.BLL.pdb
+C:\Users\Bandit\source\repos\MusicApp\Music.BLL\bin\Release\Dapper.dll
+C:\Users\Bandit\source\repos\MusicApp\Music.BLL\bin\Release\Dapper.xml
+C:\Users\Bandit\source\repos\MusicApp\Music.BLL\obj\Release\Music.BLL.csprojAssemblyReference.cache
+C:\Users\Bandit\source\repos\MusicApp\Music.BLL\obj\Release\Music.BLL.csproj.CopyComplete

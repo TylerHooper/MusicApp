@@ -2,27 +2,52 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <div class="text-center">
-        <h1>Music App</h1>
-        <p class="lead">This app will help find your musical elements with ease. Currently working on Key Signatures.</p>
+<header>
+    <div class="keysig-text-box">
+        <h1>Get started<br />writing great music.</h1>
+        <a class="btn-main btn-full" href="#">Show me how</a>
     </div>
-</div>
+</header>
 
-
-<div class="container">
+<section class="section-keysig">
     <div class="row">
-        <div class="col-md-4 col-md-offset-2">
-            <h2>Key Signatures</h2>
-            <p>
-                Find your Key Signatures here! Choose from a pre-set key signature, or enter your own formula!
+        <h2>Your music needs all in one place</h2>
+        <p class="long-copy">
+            Knowing where to start when writing a song can be challenging. Don't worry, your Music Companion is here to help! Whether you're struggling to start, or in need of inspiration to spice up your composition, you'll find a variety of tools here to assist you.
+        </p>
+    </div>
+
+    <div class="row center-block">
+        <div class="col-md-4">
+            <ion-icon name="musical-note" class="category-icon"></ion-icon>
+            <h3>Key Signatures</h3>
+            <p class="desc">
+                Great songs start with the right key signature. This tool will help you pick where to start with writing your musical composition.
             </p>
-            <p>@Html.ActionLink("Go Now »", "Index", "KeySignatures", null, new { @class = "btn btn-default btn-md" }) </p>
+            <p>
+                @Html.ActionLink("Go Now", "Index", "KeySignatures", null, new { @class = "btn-main btn-full" }) 
+            </p>
+
         </div>
         <div class="col-md-4">
-            <h2>More coming soon...</h2>
-            <p>Next step: Take over the world.</p>
-            <p>- Your friendly neighborhood AI</p>
+            <ion-icon name="musical-notes" class="category-icon"></ion-icon>
+            <h3>Chords</h3>
+            <p class="desc">
+                Need to find just the right chord? This tool will help you find the one you are looking for. Simply select your key signature, and we'll do the rest.
+            </p>
+            <p>
+                <a class="btn-main btn-ghost" href="#">Coming Soon...</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <ion-icon name="headset" class="category-icon"></ion-icon>
+            <h3>Chord Progressions</h3>
+            <p class="desc">
+                A good chord progression is the bread and butter of a great composition. Use this tool to help you get started with capturing the feel you are looking for.
+            </p>
+            <p>
+                <a class="btn-main btn-ghost" href='#'>Coming Soon...</a>
+            </p>
         </div>
     </div>
-</div>
+</section>

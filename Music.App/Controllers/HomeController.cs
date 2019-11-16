@@ -22,11 +22,11 @@ namespace Music.App.Controllers
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Please email all inquires to:";
+        //public ActionResult Contact()
+        //{
+        //    ViewBag.Message = "Please email all inquires to:";
 
-            return View();
-        }
+        //    return View();
+        //}
     }
 }

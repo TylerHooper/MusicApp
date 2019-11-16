@@ -4,3 +4,6 @@ C:\Users\Bandit\source\repos\MusicApp\Music.BLL\obj\Debug\Music.BLL.csprojAssemb
 C:\Users\Bandit\source\repos\MusicApp\Music.BLL\obj\Debug\Music.BLL.csproj.CoreCompileInputs.cache
 C:\Users\Bandit\source\repos\MusicApp\Music.BLL\obj\Debug\Music.BLL.dll
 C:\Users\Bandit\source\repos\MusicApp\Music.BLL\obj\Debug\Music.BLL.pdb
+C:\Users\Bandit\source\repos\MusicApp\Music.BLL\bin\Debug\Dapper.dll
+C:\Users\Bandit\source\repos\MusicApp\Music.BLL\bin\Debug\Dapper.xml
+C:\Users\Bandit\source\repos\MusicApp\Music.BLL\obj\Debug\Music.BLL.csproj.CopyComplete

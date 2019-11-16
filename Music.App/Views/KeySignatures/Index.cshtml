@@ -4,46 +4,66 @@
 
 @using (Html.BeginForm("Index", "KeySignatures", FormMethod.Post))
 {
-    <div class="container-fluid format-form">
-        <form class="form-horizontal">
-            <div class="form-inline ">
-                <select id="Key" name="Key" class="form-control">
-                    <option value='C'>C</option>
-                    <option value='D'>D</option>
-                    <option value='E'>E</option>
-                    <option value='F'>F</option>
-                    <option value='G'>G</option>
-                    <option value='A'>A</option>
-                    <option value='B'>B</option>
-                </select>
-                <select id="Accidential" name="Accidential" class="form-control">
-                    <option value="natural">♮</option>
-                    <option value="flat">♭</option>
-                    <option value="sharp">#</option>
-                </select>
-                <select id="Mode" name="Mode" class="form-control">
-                    <option value="major">Major</option>
-                    <option value="natMinor">Natural Minor</option>
-                    <option value="harMinor">Harmonic Minor</option>
-                    <option value="melMinor">Melodic Minor</option>
-                    <option value="dorian">Dorian</option>
-                    <option value="phrygian">Phrygian</option>
-                    <option value="lydian">Lydian</option>
-                    <option value="mixolydian">Mixolydian</option>
-                    <option value="locrian">Locrian</option>
-                    <option value="other">Other...</option>
-                </select>
-                <input id="CustomMode" name="CustomMode" type="text" class="form-control" placeholder="Custom" disabled>
-                <button type="submit" class="btn btn-default" @*disabled="disabled"*@>Submit</button>
+    <section class="key-sig-form">
+        <div class="row center-block">
+            <div class="format-form">
+                <form class="form-horizontal">
+                    <div class="form-inline">
+                        <div class="col-md-3 form-column">
+                            <div class="col-md-6 form-column">
+                                <select id="Key" name="Key" class="form-control form-element">
+                                    <option value='C'>C</option>
+                                    <option value='D'>D</option>
+                                    <option value='E'>E</option>
+                                    <option value='F'>F</option>
+                                    <option value='G'>G</option>
+                                    <option value='A'>A</option>
+                                    <option value='B'>B</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 form-column">
+                                <select id="Accidential" name="Accidential" class="form-control form-element">
+                                    <option value="natural">♮</option>
+                                    <option value="flat">♭</option>
+                                    <option value="sharp">#</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 form-column">
+                            <select id="Mode" name="Mode" class="form-control form-element">
+                                <option value="major">Major</option>
+                                <option value="natMinor">Natural Minor</option>
+                                <option value="harMinor">Harmonic Minor</option>
+                                <option value="melMinor">Melodic Minor</option>
+                                <option value="dorian">Dorian</option>
+                                <option value="phrygian">Phrygian</option>
+                                <option value="lydian">Lydian</option>
+                                <option value="mixolydian">Mixolydian</option>
+                                <option value="locrian">Locrian</option>
+                                <option value="other">Other...</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-3 form-column">
+                            @*<input id="CustomMode" name="CustomMode" type="text" class="form-control form-element" placeholder="Custom" disabled>*@
+                        </div>
+
+                        <div class="col-md-3 form-column">
+                            <button type="submit" id="submit" class="btn btn-default form-element">Submit</button>
+                        </div>
+                    </div>
+</form>
             </div>
-        </form>
-    </div>
+        </div>
+    </section>
 
     //KEYBOARD
 
     <div class="container-fluid">
         <div class="row">
-            <ul class="set format-keys">
+            <ul class="set format-keys center-block">
                 <li id="cKey" name="cKey" class="white @ViewBag.KeyColorC c"></li>
                 <li id="csKey" name="csKey" class="black @ViewBag.KeyColorCS cs"></li>
                 <li id="dKey" name="dKey" class="white @ViewBag.KeyColorD d"></li>

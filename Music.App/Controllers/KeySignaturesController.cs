@@ -16,22 +16,18 @@ namespace Music.App.Controllers
             return View();
         }
 
-        //public ActionResult Result()
-        //{
-        //    ViewBag.Message = "Here is your Key Signature:";
-        //    ViewBag.Title = "Result";
-
-        //    return View();
-        //}
-
         [HttpPost]
         public ActionResult Index(KeySignatureForm keySignature)
         {
-            // declare variables based on form input
-            char key = keySignature.Key;
-            string accidential = keySignature.Accidential;
-            string mode = keySignature.Mode;
-            string customMode = keySignature.CustomMode;
+            // passing form variables to calculate key signature
+            CalculateKeySignature(keySignature.Key, keySignature.Accidential, keySignature.Mode, keySignature.CustomMode);
+
+            return View();
+        }
+
+        // method to calculate the key signature and display
+        public void CalculateKeySignature(char key, string accidential, string mode, string customMode)
+        {
 
             // pass input values from form to ModeResponse method in the BLL, assign results to string
             string[] modeResult = KeySigGenerator.ModeResponse(key, accidential, mode, customMode);
@@ -83,8 +79,6 @@ namespace Music.App.Controllers
                         break;
                 }
             }
-
-            return View();
         }
 
     }

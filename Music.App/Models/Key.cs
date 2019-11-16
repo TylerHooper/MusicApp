@@ -7,8 +7,7 @@ namespace Music.App.Models
 {
     public class Key
     {
-        public string KeyLabel { get; set; }
-        public int KeySortOrder { get; set; }
-        public string KeyHexColor { get; set; }
+        public int Id { get; set; }
+        public string KeyValue { get; set; }
     }
 }
